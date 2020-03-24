@@ -39,24 +39,24 @@
             </TextBox.Text>
         </TextBox>
 
-        <Button x:Name="NuevoButton" Content="Nuevo" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="67,180,0,0" Grid.Row="1" VerticalAlignment="Top">
+        <Button x:Name="NuevoButton" Content="Nuevo" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="67,180,0,0" Grid.Row="1" VerticalAlignment="Top" Click="NuevoButton_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="GuardarButton" Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="163,180,0,0" Grid.Row="1" VerticalAlignment="Top">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="EliminarButton" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="273,180,0,0" Grid.Row="1" VerticalAlignment="Top">
+        <Button x:Name="GuardarButton" Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="163,180,0,0" Grid.Row="1" VerticalAlignment="Top" Click="GuardarButton_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
 
-        <Button x:Name="BuscarButton" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="223,12,0,5" Grid.Row="1" VerticalAlignment="Top">
+        <Button x:Name="EliminarButton" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="273,180,0,0" Grid.Row="1" VerticalAlignment="Top" Click="EliminarButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="BuscarButton" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="223,12,0,5" Grid.Row="1" VerticalAlignment="Top" Click="BuscarButton_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

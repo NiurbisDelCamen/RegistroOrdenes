@@ -18,7 +18,7 @@ namespace RegistroOrden.Entidades
         [ForeignKey("OrdenId")]
         
 
-        public virtual List<OrdenesDetalle> Detalles { get; set; }
+        public virtual List<OrdenesDetalle> Detalles{ get; set; }
         
         public Ordenes()
         {

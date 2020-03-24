@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroOrden.UI; 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace RegistroOrden
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        
+
+        private void ClientesButton_Click(object sender, RoutedEventArgs e)
+        {
+            rClientes cClientes = new rClientes();
+            cClientes.Show();
+        }
+
+        private void OrdenButton_Click(object sender, RoutedEventArgs e)
+        {
+            rOrdenes Rordenes = new rOrdenes();
+            Rordenes.Show();
+        }
+
+        private void ProductoButton_Click(object sender, RoutedEventArgs e)
+        {
+            rProductos RProductos = new rProductos();
+            RProductos.Show();
         }
     }
 }

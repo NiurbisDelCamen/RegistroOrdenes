@@ -17,13 +17,113 @@
             <RowDefinition Height="75*"/>
             <RowDefinition Height="75*"/>
             <RowDefinition Height="75*"/>
+
         </Grid.RowDefinitions>
 
         <Label Content="OrdenId" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Fecha" Grid.Column="1" HorizontalAlignment="Left" Margin="10,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="ClienteId" Grid.Column="1" HorizontalAlignment="Left" Margin="5,67,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Monto" Grid.Column="1" HorizontalAlignment="Left" Margin="7,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        
+        <Label Content="Producto" Grid.Column="1" HorizontalAlignment="Left" Margin="8,70,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label Content="Cantidad" Grid.Column="1" HorizontalAlignment="Left" Margin="207,74,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="OrdenIdTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="69,18,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+            <TextBox.Text>
+                <Binding Path="OrdenId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBox x:Name="ClienteIdTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="67,75,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+            <TextBox.Text>
+                <Binding Path="OrdenId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBox x:Name="MontoTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="67,8,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+            <TextBox.Text>
+                <Binding Path="OrdenId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBox x:Name="ProductoTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="69,78,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+            <TextBox.Text>
+                <Binding Path="Producto" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <DatePicker Name="FechaDatePickerTextBox" Grid.Row="1" Grid.Column="1" Margin="67,41,606,36">
+            <DatePicker.SelectedDate>
+                <Binding Path="Fecha" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules/>
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
+        <TextBox x:Name="CantidadTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="275,82,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+            <TextBox.Text>
+                <Binding Path="Cantidad" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <Button x:Name="NuevoButton" Content="Nuevo" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="88,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="45" Width="96" Click="NuevoButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="GuardarButton" Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="225,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="45" Width="96" Click="GuardarButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="EliminarButton" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="347,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="45" Width="96" Click="EliminarButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="BuscarButton" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="207,13,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="88" Click="BuscarButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <DataGrid x:Name="OrdenesDataGrid" Grid.Row="3" Margin="5,10,357,33" Grid.Column="1">
+            <DataGrid.ItemsSource>
+                <Binding Path="Llamadas" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/>
+            </DataGrid.ItemsSource>
+        </DataGrid>
+        <Button x:Name="RemoverButton" Content="Remover" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="5,78,0,0" Grid.Row="3" VerticalAlignment="Top" Height="28" Width="96" Click="RemoverButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AgregarButton" Content="Agregar" Grid.Column="1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="420,75,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="96" Click="AgregarButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
 
 
     </Grid>

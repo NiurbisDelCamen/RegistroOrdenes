@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroOrden"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registros" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
 
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Button x:Name="ProductoButton" Content="Producto"  HorizontalContentAlignment="Right"  Width="104"  Click="ProductoButton_Click" Height="34">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="OrdenButton" Content="Orden" HorizontalContentAlignment="Center"  Width="102" Click="OrdenButton_Click" Height="34">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ClientesButton" Content="Clientes" HorizontalContentAlignment="Center"  Width="102" Click="ClientesButton_Click" Height="34">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

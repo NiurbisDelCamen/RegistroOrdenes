@@ -15,7 +15,7 @@ namespace RegistroOrden.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = DATA/Ordenes.db");
+            optionsBuilder.UseSqlite(@"Data Source = DATA\Ordenes.db");
         }
     }
 }
